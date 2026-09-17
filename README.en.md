@@ -48,9 +48,9 @@ Without an adapter you can enable **Demo mode** on Gateway Settings to explore t
 | x86_64 soft routers | `x86_64` | USB BLE |
 | Some 32-bit ARM | `arm` | See section 2 |
 
-![Home Filogic-style router (illustration)](images/hw/router-rax3000z.png)
+![Home Filogic-style router (illustration)](hw-router-rax3000z.png)
 
-![Travel router (illustration)](images/hw/router-gl-mt3000.png)
+![Travel router (illustration)](hw-router-gl-mt3000.png)
 
 ### 1.2 USB Bluetooth dongles
 
@@ -59,9 +59,9 @@ Without an adapter you can enable **Demo mode** on Gateway Settings to explore t
 | Black stick | RTL8761BU | Most common; firmware often bundled |
 | Nano dongle | CSR8510 | Tiny |
 
-![USB BLE stick (illustration)](images/hw/usb-ble-rtl8761.png)
+![USB BLE stick (illustration)](hw-usb-ble-rtl8761.png)
 
-![USB BLE nano (illustration)](images/hw/usb-ble-csr8510.png)
+![USB BLE nano (illustration)](hw-usb-ble-csr8510.png)
 
 After plugging in, `bluetoothctl list` should show `hci0`. On a VM, pass the USB device through to the guest.
 
@@ -108,7 +108,7 @@ opkg pulls `bluez-daemon` and `dbus` when the feeds are reachable.
 2. **System → Software**.
 3. **Upload Package…** — install matching `btgateway_*.ipk` first, then `luci-app-btgateway_*_all.ipk`.
 
-![Software page (English)](images/en/04-software.png)
+![Software page (English)](en-04-software.png)
 
 Refresh. **BLE Gateway** should appear in the menu. If not:
 
@@ -139,7 +139,7 @@ Plug in the USB adapter and confirm `hci0` with `bluetoothctl list`.
 
 Open `http://<router-ip>/cgi-bin/luci`. Username is usually `root`. Use **this router’s** admin password.
 
-![Login (English)](images/en/01-login.png)
+![Login (English)](en-01-login.png)
 
 ---
 
@@ -149,7 +149,7 @@ Open `http://<router-ip>/cgi-bin/luci`. Username is usually `root`. Use **this r
 2. **Language and Style**.
 3. Choose `English` or `简体中文 (Simplified Chinese)`, **Save & Apply**, refresh.
 
-![Language (English)](images/en/03-language.png)
+![Language (English)](en-03-language.png)
 
 Set the timezone on the same page (e.g. `Asia/Shanghai`). Scan timestamps use the router clock.
 
@@ -159,7 +159,7 @@ Set the timezone on the same page (e.g. `Asia/Shanghai`). Scan timestamps use th
 
 **Status → Overview** shows model, architecture, and target. Wrong `btgateway` arch = install or runtime failure.
 
-![Overview (English)](images/en/02-overview.png)
+![Overview (English)](en-02-overview.png)
 
 Example: architecture ARMv8 / target `armsr/armv8` → use the **aarch64** package.
 
@@ -169,7 +169,7 @@ Example: architecture ARMv8 / target `armsr/armv8` → use the **aarch64** packa
 
 **BLE Gateway → Gateway Settings**.
 
-![Gateway Settings (English)](images/en/05-gateway-settings.png)
+![Gateway Settings (English)](en-05-gateway-settings.png)
 
 ### 7.1 Status chips
 
@@ -195,7 +195,7 @@ The **gateway MAC** is the adapter address (often used as the platform gateway i
 
 Scroll to the broker section. **Host is IP or hostname only** — no `mqtt://`. Port is separate (`1883` plain, usually `8883` for MQTTS).
 
-![MQTT fields (English)](images/en/05b-gateway-mqtt.png)
+![MQTT fields (English)](en-05b-gateway-mqtt.png)
 
 | Field | Notes |
 | --- | --- |
@@ -217,13 +217,13 @@ TCP/UDP uplink is optional and off by default. After save, the top chip should s
 
 **BLE Gateway → Bluetooth Settings**.
 
-![Bluetooth Settings (English)](images/en/06-bluetooth-settings.png)
+![Bluetooth Settings (English)](en-06-bluetooth-settings.png)
 
 1. Select adapter `hci0`.
 2. Enable **Continuous scan** and **Scan report**.
 3. Tune active scan, RSSI-only mode, cache period (default `1000` ms), cache size, and list TTL as needed.
 
-![Filters & heartbeat (English)](images/en/06b-bluetooth-filters.png)
+![Filters & heartbeat (English)](en-06b-bluetooth-filters.png)
 
 Filter policy, name/UUID/MAC filters, and the 30s keepalive toward the broker live on this page. **Save & Apply**.
 
@@ -233,7 +233,7 @@ Filter policy, name/UUID/MAC filters, and the 30s keepalive toward the broker li
 
 **BLE Gateway → Scan List** (refreshes about every 2s).
 
-![Scan List (English)](images/en/07-scan-list.png)
+![Scan List (English)](en-07-scan-list.png)
 
 ---
 
@@ -241,7 +241,7 @@ Filter policy, name/UUID/MAC filters, and the 30s keepalive toward the broker li
 
 Click **Packets** on a row for up to three recent advertisements.
 
-![Packets (English)](images/en/08-packets.png)
+![Packets (English)](en-08-packets.png)
 
 ---
 
@@ -249,7 +249,7 @@ Click **Packets** on a row for up to three recent advertisements.
 
 Same command path as MQTT downlink.
 
-![Device Control (English)](images/en/09-device-control.png)
+![Device Control (English)](en-09-device-control.png)
 
 Typical flow: pick device → **Connect** → **Discover GATT** → read/write/notify → **Disconnect**.
 

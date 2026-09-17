@@ -48,9 +48,9 @@ English: [README.en.md](README.en.md)
 | x86_64 软路由 | `x86_64` | 插 USB BLE |
 | 部分 32 位 ARM | `arm` | 见第 2 节 |
 
-![家用 Filogic 路由示意](images/hw/router-rax3000z.png)
+![家用 Filogic 路由示意](hw-router-rax3000z.png)
 
-![旅行路由示意](images/hw/router-gl-mt3000.png)
+![旅行路由示意](hw-router-gl-mt3000.png)
 
 ### 1.2 USB 蓝牙
 
@@ -59,9 +59,9 @@ English: [README.en.md](README.en.md)
 | 黑色长条 USB 棒 | RTL8761BU | 最常见，多数固件自带驱动/固件 |
 | 纳米小棒 | CSR8510 | 体积小 |
 
-![USB BLE 长条示意](images/hw/usb-ble-rtl8761.png)
+![USB BLE 长条示意](hw-usb-ble-rtl8761.png)
 
-![USB BLE 纳米棒示意](images/hw/usb-ble-csr8510.png)
+![USB BLE 纳米棒示意](hw-usb-ble-csr8510.png)
 
 插入后 SSH 执行 `bluetoothctl list`，应能看到 `hci0`。虚拟机需 USB 直通。
 
@@ -113,7 +113,7 @@ English: [README.en.md](README.en.md)
 3. 点 **上传软件包**，先上传匹配架构的 `btgateway_*.ipk`，再上传 `luci-app-btgateway_*_all.ipk`。
 4. 也可以把 ipk 的直链贴进「下载并安装软件包」输入框，点 **确认**。
 
-![软件包页面（中文）](images/zh/04-software.png)
+![软件包页面（中文）](zh-04-software.png)
 
 装完后刷新页面。左侧应出现 **蓝牙网关**。若没有，SSH 执行：
 
@@ -146,7 +146,7 @@ opkg install ./btgateway.ipk ./luci-app-btgateway.ipk
 
 浏览器打开 `http://<路由器IP>/cgi-bin/luci`（常见为 `192.168.1.1` 或你规划的 LAN 地址）。用户名一般是 `root`，密码是**这台路由器自己的管理密码**。
 
-![登录页（中文）](images/zh/01-login.png)
+![登录页（中文）](zh-01-login.png)
 
 点 **登录**。之后左侧菜单即可进入蓝牙网关。
 
@@ -159,7 +159,7 @@ opkg install ./btgateway.ipk ./luci-app-btgateway.ipk
 3. **语言**选 `简体中文 (Simplified Chinese)` 或 `English`。选 `auto` 则跟随浏览器语言。
 4. 点右下角 **保存并应用**，再刷新页面。
 
-![语言和界面（中文）](images/zh/03-language.png)
+![语言和界面（中文）](zh-03-language.png)
 
 同一页的 **常规设置** 里把时区设成实际时区（例如 `Asia/Shanghai`）。扫描上报时间用的是路由器本地时钟。
 
@@ -169,7 +169,7 @@ opkg install ./btgateway.ipk ./luci-app-btgateway.ipk
 
 **状态 → 概览** 里可看到型号、架构、目标平台。选错 `btgateway` 架构时，安装会失败或进程无法运行。
 
-![状态概览（中文）](images/zh/02-overview.png)
+![状态概览（中文）](zh-02-overview.png)
 
 示例：`架构` 为 ARMv8、`目标平台` 为 `armsr/armv8` → 安装 `aarch64` 包。
 
@@ -179,7 +179,7 @@ opkg install ./btgateway.ipk ./luci-app-btgateway.ipk
 
 左侧 **蓝牙网关 → 网关设置**。这是启用网关、填 MQTT、看运行状态和做在线更新的地方。
 
-![网关设置上半（中文）](images/zh/05-gateway-settings.png)
+![网关设置上半（中文）](zh-05-gateway-settings.png)
 
 ### 7.1 运行状态
 
@@ -208,7 +208,7 @@ opkg install ./btgateway.ipk ./luci-app-btgateway.ipk
 
 向下滚动填写 Broker。**服务器地址只填 IP 或域名**，不要加 `mqtt://`。端口单独填：明文一般 `1883`，MQTTS 一般 `8883`。
 
-![MQTT 参数（中文）](images/zh/05b-gateway-mqtt.png)
+![MQTT 参数（中文）](zh-05b-gateway-mqtt.png)
 
 按平台文档填写。字段含义：
 
@@ -238,7 +238,7 @@ TCP / UDP 上报可选，默认关闭。
 
 **蓝牙网关 → 蓝牙设置**。
 
-![蓝牙设置上半（中文）](images/zh/06-bluetooth-settings.png)
+![蓝牙设置上半（中文）](zh-06-bluetooth-settings.png)
 
 ### 8.1 适配器与扫描
 
@@ -253,7 +253,7 @@ TCP / UDP 上报可选，默认关闭。
 
 ### 8.2 过滤、自身广播、心跳
 
-![扫描过滤与心跳（中文）](images/zh/06b-bluetooth-filters.png)
+![扫描过滤与心跳（中文）](zh-06b-bluetooth-filters.png)
 
 - **过滤策略**：`或` / `与`。
 - 可按 RSSI、广播名、仅 iBeacon、UUID、Company ID、MAC 段过滤。
@@ -268,7 +268,7 @@ TCP / UDP 上报可选，默认关闭。
 
 **蓝牙网关 → 扫描列表**。大约每 2 秒刷新。
 
-![扫描列表（中文）](images/zh/07-scan-list.png)
+![扫描列表（中文）](zh-07-scan-list.png)
 
 | 列 | 含义 |
 | --- | --- |
@@ -285,7 +285,7 @@ TCP / UDP 上报可选，默认关闭。
 
 在某一行点 **数据包**，弹出最近最多 3 条广播（新的在前）。
 
-![原始数据包（中文）](images/zh/08-packets.png)
+![原始数据包（中文）](zh-08-packets.png)
 
 ---
 
@@ -293,7 +293,7 @@ TCP / UDP 上报可选，默认关闭。
 
 扫描列表点 **控制**，或打开 **蓝牙网关 → 设备控制**。与 MQTT 下发共用一套命令路径。
 
-![设备控制（中文）](images/zh/09-device-control.png)
+![设备控制（中文）](zh-09-device-control.png)
 
 典型顺序：选设备 → **连接** → **发现 GATT** → 读写/通知 → **断开**。
 
