@@ -1,30 +1,30 @@
 {
-  "version": "1.0.1",
-  "notes": "修复扫描上报",
+  "version": "1.0.10",
+  "notes": "1.0.10: BLE gateway with asset-platform downlink (buzz/eink/inventory), BlueZ agent, connectable PDU, ack uplink",
   "packages": [
     {
       "name": "luci-app-btgateway",
       "arch": "all",
-      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/luci-app-btgateway_1.0.1-1_all.ipk",
-      "sha256": "a904c9775e6ad45874f9be19a1b0939f287cbb05961c847c07e58a161849ba30"
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/luci-app-btgateway_1.0.10-1_all.ipk",
+      "sha256": "d0d325147e4a2fae6a94fdb88d79367fe83e2234010956b0ff0ec4c243f47eb0"
     },
     {
       "name": "btgateway",
       "arch": "x86_64",
-      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_x86_64.ipk",
-      "sha256": "306664d417315f98f9d8f7a08329f18e975cfe0b0a2a906e6cf22222d4f2b993"
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.10-1_x86_64.ipk",
+      "sha256": "e59adc728a8efa0d325e7117025339143e5114b4297981cdd31e6097ef23dff4"
     },
     {
       "name": "btgateway",
       "arch": "arm",
-      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_arm.ipk",
-      "sha256": "e67c1db9b95515690812688ce7a057f34e0ff60e7296119abe81d63680179fa2"
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.10-1_arm.ipk",
+      "sha256": "0aa2130b5c2bab001e1eb9a4b481dc929c3a014862823bc2a9ea377e03156fd8"
     },
     {
       "name": "btgateway",
       "arch": "aarch64",
-      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_aarch64.ipk",
-      "sha256": "0eda596af5a858d2e2460706b7aabaadd6df99d897a0b6584e1c3bcac8f6a370"
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.10-1_aarch64.ipk",
+      "sha256": "0dd38ca6f3dd59d915528a38a54c5579d7fe6767faa26e3c24af8bc5ca8f24f0"
     }
   ]
 }
