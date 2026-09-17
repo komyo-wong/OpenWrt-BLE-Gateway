@@ -12,13 +12,19 @@
       "name": "btgateway",
       "arch": "x86_64",
       "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_x86_64.ipk",
-      "sha256": "f0c20715fb253f22bbe1f595624be2d8c43224abc86021b0593bad066fbe1080"
+      "sha256": "306664d417315f98f9d8f7a08329f18e975cfe0b0a2a906e6cf22222d4f2b993"
+    },
+    {
+      "name": "btgateway",
+      "arch": "arm",
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_arm.ipk",
+      "sha256": "e67c1db9b95515690812688ce7a057f34e0ff60e7296119abe81d63680179fa2"
     },
     {
       "name": "btgateway",
       "arch": "aarch64",
       "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_aarch64.ipk",
-      "sha256": "35f1b345ba62a6d200890b39b0ddbdf45c0a9b45b9e07501e9df7032e542066d"
+      "sha256": "0eda596af5a858d2e2460706b7aabaadd6df99d897a0b6584e1c3bcac8f6a370"
     }
   ]
 }
