@@ -2,7 +2,15 @@
   "version": "1.0.1",
   "notes": "修复扫描上报",
   "packages": [
-    {"name": "btgateway", "url": "https://你的域名/btgateway_1.0.1.ipk", "sha256": "..."},
-    {"name": "luci-app-btgateway", "url": "https://你的域名/luci-app-btgateway_1.0.1_all.ipk", "sha256": "..."}
+    {
+      "name": "btgateway",
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_aarch64_generic.ipk",
+      "sha256": "da5d4807b304040bf04261667f5091d5329b22d2d9b455373e4b4d14eb84ef43"
+    },
+    {
+      "name": "luci-app-btgateway",
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/luci-app-btgateway_1.0.1-1_all.ipk",
+      "sha256": "a904c9775e6ad45874f9be19a1b0939f287cbb05961c847c07e58a161849ba30"
+    }
   ]
 }
