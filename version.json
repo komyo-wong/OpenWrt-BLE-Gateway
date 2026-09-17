@@ -3,14 +3,22 @@
   "notes": "修复扫描上报",
   "packages": [
     {
-      "name": "btgateway",
-      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_aarch64_generic.ipk",
-      "sha256": "da5d4807b304040bf04261667f5091d5329b22d2d9b455373e4b4d14eb84ef43"
-    },
-    {
       "name": "luci-app-btgateway",
+      "arch": "all",
       "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/luci-app-btgateway_1.0.1-1_all.ipk",
       "sha256": "a904c9775e6ad45874f9be19a1b0939f287cbb05961c847c07e58a161849ba30"
+    },
+    {
+      "name": "btgateway",
+      "arch": "x86_64",
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_x86_64.ipk",
+      "sha256": "f0c20715fb253f22bbe1f595624be2d8c43224abc86021b0593bad066fbe1080"
+    },
+    {
+      "name": "btgateway",
+      "arch": "aarch64",
+      "url": "https://raw.githubusercontent.com/komyo-wong/OpenWrt-BLE-Gateway/main/btgateway_1.0.1-1_aarch64.ipk",
+      "sha256": "35f1b345ba62a6d200890b39b0ddbdf45c0a9b45b9e07501e9df7032e542066d"
     }
   ]
 }
