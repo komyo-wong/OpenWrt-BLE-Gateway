@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "notes": "修复扫描上报",
+  "packages": [
+    {"name": "btgateway", "url": "https://你的域名/btgateway_1.0.1.ipk", "sha256": "..."},
+    {"name": "luci-app-btgateway", "url": "https://你的域名/luci-app-btgateway_1.0.1_all.ipk", "sha256": "..."}
+  ]
+}
